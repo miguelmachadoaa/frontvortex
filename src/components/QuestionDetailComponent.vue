@@ -1,5 +1,6 @@
 <template>
     <div v-if="question" >
+      <h3 class="mt-3 mb-3" >Detalle de Pregunta  </h3>
       <div class="card  text-left ">
           <div class="card-header text-left">
             {{question.data.title}}
@@ -33,6 +34,7 @@
           </div>
           <div class="mb-3">
             <button class="btn btn-success" @click="addAnswer">Responser</button>
+            <RouterLink class="btn btn-danger" to="/questions">Volver</RouterLink>
           </div>
         </div>
       </div>

@@ -22,8 +22,6 @@
 
   <div class="container " style="text-align: left;">
     <div class="row">
-      <h1 class="text-center">Bienvenido al Foro Vortex</h1>
-
       <div class="col-sm-3"></div>
       <div class="col-sm-6">
         <main>

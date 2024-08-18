@@ -1,5 +1,6 @@
 <template>
     <div>
+      <h3 class="mt-3 mb-3" >Listado de preguntas </h3>
       <div class="card  mb-4" 
       v-for="(question, index) in questions"
       :key="index"
@@ -57,6 +58,10 @@
     mounted(){
       this.getQuestions();
       console.log('question');
+      if(!authService.verifyUser()){
+        this.$router.push('/login');
+        console.log('login');
+      }
     },
   };
   </script>

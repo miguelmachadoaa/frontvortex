@@ -3,6 +3,7 @@
 
       <div class="row">
         <div class="col">
+            <h3 class="mt-3">Agregar Pregunta </h3>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Titulo</label>
                 <input type="text"  v-model="title" class="form-control" id="title" placeholder="Title">
@@ -14,6 +15,8 @@
           </div>
           <div class="mb-3">
             <button class="btn btn-success" @click="addQuestion">Responser</button>
+            <RouterLink class="btn btn-danger" to="/questions">Cancelar</RouterLink>
+
           </div>
         </div>
       </div>

@@ -9,10 +9,11 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <RouterLink class="nav-link active" to="/">Home</RouterLink>
-        <RouterLink class="nav-link active" to="/register">Registrarse</RouterLink>
+        <RouterLink v-if="!isLogin" class="nav-link active" to="/login">Login</RouterLink>
+        <RouterLink v-if="!isLogin" class="nav-link active" to="/register">Registrarse</RouterLink>
         <RouterLink class="nav-link active" to="/questions">Preguntas</RouterLink>
         <RouterLink class="nav-link active" to="/add">Agregar Pregunta</RouterLink>
-        <RouterLink v-if="logger" class="nav-link active" to="/logout">LogOut</RouterLink>
+        <RouterLink v-if="isLogin" class="nav-link active" to="/logout">LogOut</RouterLink>
        
       </div>
     </div>
@@ -45,7 +46,7 @@ import authService from '@/services/authService';
         email: '',
         password: '',
         message: '',
-        logger: '',
+        isLogin: '',
       };
     },
     methods: {
@@ -54,9 +55,9 @@ import authService from '@/services/authService';
     },
     mounted(){
       if(authService.verifyUser()){
-        this.logger=true;
+        this.isLogin=true;
       }else{
-        this.logger=false;
+        this.isLogin=false;
       }
     },
   };

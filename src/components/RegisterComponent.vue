@@ -6,6 +6,7 @@
         <input class="form-control mb-2" v-model="password" type="password" placeholder="Password" />
         <input class="form-control mb-2" v-model="password_confirmation" type="password" placeholder="Confirm Password" />
         <button class="btn btn-primary" type="submit">Register</button>
+        <p> <RouterLink   class="nav-link active" to="/login">Ya tienes Cuenta! Inicia Session</RouterLink></p>
       </form>
     </div>
 </template>

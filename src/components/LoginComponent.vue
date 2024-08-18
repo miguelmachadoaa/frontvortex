@@ -5,8 +5,11 @@
         <h4 >{{ message }}</h4>
         <input class="form-control mb-3" v-model="email" placeholder="Email" />
         <input class="form-control mb-3" v-model="password" type="password" placeholder="Password" />
-        <button type="submit">Login</button>
+        <button class="btn btn-primary" type="submit">Login</button>
+        <p> <RouterLink   class="nav-link active" to="/register">No tienes cuenta? Registrarse</RouterLink></p>
+
       </form>
+
     </div>
   </template>
   

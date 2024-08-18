@@ -48,7 +48,6 @@ import authService from '@/services/authService';
       };
     },
     methods: {
-      
 
     },
     mounted(){
@@ -57,6 +56,7 @@ import authService from '@/services/authService';
       }else{
         this.isLogin=false;
       }
+      console.log('App '+this.isLogin)
     },
   };
 </script>

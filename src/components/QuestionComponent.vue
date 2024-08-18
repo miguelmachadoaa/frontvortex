@@ -1,12 +1,13 @@
 <template>
     <div>
       <h3 class="mt-3 mb-3" >Listado de preguntas </h3>
-      <div class="card  mb-4" 
+      <div class="card  mb-4"  
       v-for="(question, index) in questions"
       :key="index"
       >
-          <div class="card-header">
-            {{question.title}}
+          <div class="card-header" >
+            <router-link  :to="'/question/' + question.id"  class="btn btn-link " style="color: #333; text-decoration: none; font-weight: 600;">{{question.title}}</router-link>
+            
           </div>
           <div class="card-body">
             <p class="card-text">{{question.description}}</p>
@@ -65,4 +66,8 @@
     },
   };
   </script>
-  
+  <style>
+  .card{
+    border-radius: 0;
+  }
+  </style>

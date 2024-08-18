@@ -26,16 +26,35 @@
           
       </div>
 
-      <div class="row">
+      <div class="row mt-4">
         <div class="col">
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Responder</label>
-            <textarea class="form-control" v-model="description" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+          <div class="card  text-left ">
+          <div class="card-header text-left">
+            Agregar Respuesta
           </div>
-          <div class="mb-3">
+          <div class="card-body">
+
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Responder</label>
+              <textarea class="form-control" v-model="description" placeholder="Describa su respuesta" id="descripcion" rows="3"></textarea>
+            </div>
+            
+          </div>
+
+          <div class="card-footer text-muted" v-if="question.data">
+            <div class="mb-3">
             <button class="btn btn-success" @click="addAnswer">Responser</button>
             <RouterLink class="btn btn-danger" to="/questions">Volver</RouterLink>
           </div>
+            
+          </div>
+          
+      </div>
+
+
+          
+          
         </div>
       </div>
 
@@ -97,4 +116,8 @@
     },
   };
   </script>
-  
+  <style>
+ .card{
+    border-radius: 0;
+  }
+  </style>
